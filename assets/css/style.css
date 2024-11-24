@@ -736,6 +736,21 @@ footer
 {
     background-color: var(--primary-color);
     padding-top: 80px;
+    position: relative;
+}
+footer::before
+{
+    content: url(../images/shape1.png);
+    position: absolute;
+    inset-inline-end: 0;
+    top: 16px;
+    opacity: .03;
+    z-index: 0;
+}
+.footer-content
+{
+    position: relative;
+    z-index: 1;
 }
 footer .foot-title
 {
@@ -789,7 +804,7 @@ footer .foot-title
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    
+    backdrop-filter: blur(17.5px);
 }
 .social-list .social-anc::after
 {
@@ -1362,5 +1377,9 @@ html[dir="rtl"] .newsletter .newsletter-btn > i
     .foot-list > li:not(:last-child)
     {
         margin-bottom: 0;
+    }
+    footer::before
+    {
+        display: none;
     }
 }
